@@ -756,5 +756,5 @@ for epoch in range(1, args.epochs + 1):
         f'Val {metric}: {val_metric:.4f}, Test {metric}: {test_metric:.4f}')
     lr_scheduler.step()
 
-print(f'The ENCODER_state -> Mixup: {args.mixup}; Task Type: {args.task_type}; Idx: {args.idx}; Seed: {args.seed}')
+print(f'The ENCODER_state -> Task Type: {args.task_type}; Idx: {args.idx}; Seed: {args.seed}')
 print(f'Best Test {metric}: {best_test_metric:.4f}')
