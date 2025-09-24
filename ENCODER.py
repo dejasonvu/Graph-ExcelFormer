@@ -18,7 +18,7 @@ import torch_geometric.nn as pyg_nn
 parser = argparse.ArgumentParser()
 parser.add_argument('--task_type', type=str, choices=['binary_classification', 'multiclass_classification', 'regression'], default='binary_classification')
 parser.add_argument('--scale', type=str, choices=['small', 'medium', 'large'], default='small')
-parser.add_argument('--idx', type=int, default=1, help='The index of the dataset within DataFrameBenchmark')
+parser.add_argument('--idx', type=int, default=0, help='The index of the dataset within DataFrameBenchmark')
 parser.add_argument('--mixup', type=str, default=None, choices=[None, 'feature', 'hidden'])
 parser.add_argument('--channels', type=int, default=256)
 parser.add_argument('--graph_channels', type=int, default=128)
@@ -589,7 +589,7 @@ class ExcelFormer(Module):
             raise ValueError("ExcelFormer only accepts numerical "
                             "features.")
 
-# The space I want to develop:
+# The space we want to develop:
 # Do not modify this block
 ############################################################################################
         if stype_encoder_dict is None:
