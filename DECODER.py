@@ -374,7 +374,6 @@ from torch_frame.nn.encoder.stypewise_encoder import (
     StypeEncoder,
     # StypeWiseFeatureEncoder,
 )
-from torch_geometric.data import Data
 
 def feature_mixup(
     x: Tensor,
@@ -572,8 +571,6 @@ def train(epoch: int) -> float:
         loss_accum += float(loss) * len(data.y)
         total_count += len(data.y)
     return loss_accum / total_count
-
-from torch_geometric.data import Data
 
 @torch.no_grad()
 def test(data: Data) -> tuple[float, float, float]:
