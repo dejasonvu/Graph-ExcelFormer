@@ -15,7 +15,6 @@ from torch_frame.transforms import CatToNumTransform
 from torch_frame import TaskType
 import torch_geometric.nn as pyg_nn
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--task_type', type=str, choices=['binary_classification', 'multiclass_classification', 'regression'], default='binary_classification')
 parser.add_argument('--scale', type=str, choices=['small', 'medium', 'large'], default='small')
