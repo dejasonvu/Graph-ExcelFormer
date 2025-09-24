@@ -113,8 +113,8 @@ train_mask[:train_size] = True
 val_mask[train_size:train_size + val_size] = True
 test_mask[train_size + val_size:] = True
 
-from graph import PAM_KNN
-edge_builder = PAM_KNN(metric='cosine', num_threads=8)
+from graph import MTAM_KNN
+edge_builder = MTAM_KNN(metric='cosine', num_threads=8)
 edge_index = edge_builder.fit(X=x, base_k=3)
 print(f'Total # of edges:  {edge_index.shape[1]}.')
 
@@ -148,7 +148,6 @@ class GNNEncoder(torch.nn.Module):
 import math
 from torch import Tensor
 from torch.nn.init import _calculate_correct_fan, calculate_gain
-
 
 def attenuated_kaiming_uniform_(
     tensor: Tensor,
