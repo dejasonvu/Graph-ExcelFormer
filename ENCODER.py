@@ -3,6 +3,7 @@ import os
 import os.path as osp
 
 import torch
+import math
 import torch.nn.functional as F
 from torch_frame import stype
 from torch.optim.lr_scheduler import ExponentialLR
@@ -145,7 +146,6 @@ class GNNEncoder(torch.nn.Module):
         x = self.conv2(x=x, edge_index=edge_index, edge_weight=edge_weight)
         return x
 
-import math
 from torch import Tensor
 from torch.nn.init import _calculate_correct_fan, calculate_gain
 
