@@ -6,4 +6,4 @@
 ## 表格資料的建圖策略
 本研究設計 Multi-thread Adaptive Mutual kNN 構圖法，該演算法能快速且有效的為表格資料創建圖結構，  
 利於後續 GNN 模組的訊息傳遞與聚合。  
-演算法細節請參閱 graph.py 與 mtam_knn.pyx。
+演算法細節請參閱 **[graph.py](./graph.py)** 與 **[mtam_knn.pyx](mtam_knn.pyx)**。
